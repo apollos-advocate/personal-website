@@ -13,4 +13,21 @@
   --padding: 15px;
   --round-borders: 15px;
 }
+header nav ul li {
+  position: relative; 
+}
+
+header nav ul li ul {
+  position: absolute; 
+  top: calc(100% + 5px); 
+  left: 0;
+  display: none; 
+  background: var(--content-background-color);
+  border-radius: var(--round-borders);
+  padding: 0.5rem 1rem;
+  z-index: 1000;
+  min-width: 160px; 
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2); 
+}
+
 
