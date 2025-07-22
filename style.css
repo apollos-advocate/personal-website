@@ -1,0 +1,16 @@
+:root {
+  --background-color: #ffffff;
+  --content-background-color: #ef233c;
+  --text-color: #f0f2d5;
+  --link-color: #76da9d;
+  --link-color-hover: #006d37;
+
+  --font: Verdana, sans-serif;
+  --heading-font: Georgia, serif;
+  --font-size: 16px;
+
+  --margin: 10px;
+  --padding: 15px;
+  --round-borders: 15px;
+}
+
