@@ -2,6 +2,7 @@
   --background-color: #ffffff;
   --content-background-color: #ef233c;
   --text-color: #f0f2d5;
+  --centerbar-text-color: #f0f2d5;
   --link-color: #76da9d;
   --link-color-hover: #006d37;
 
@@ -29,5 +30,19 @@ header nav ul li ul {
   min-width: 160px; 
   box-shadow: 0 2px 8px rgba(0,0,0,0.2); 
 }
+header nav ul li:hover ul,
+header nav ul li:focus-within ul {
+  display: block; 
+}
 
+header nav ul li ul li a {
+  display: block;
+  padding: 0.3rem 0;
+  color: var(--centerbar-text-color);
+  text-decoration: none;
+}
 
+header nav ul li ul li a:hover {
+  color: var(--link-color-hover);
+  text-decoration: underline;
+}
