@@ -26,16 +26,16 @@ function headerHTML() {
           <nav>
             <ul>
               <li><a href="/">Home</a></li>
-              <li><a href="page1.html">Page 1</a></li>
-              <li><a href="page2.html">Page 2</a></li>
-              <li><a href="page3.html">Page 3</a></li>
+              <li><a href="about-me.html">Page 1</a></li>
+              <li><a href="projects.html">Page 2</a></li>
+              <li><a href="contact.html">Page 3</a></li>
               <li>
                 <strong>Submenu (hover to show)</strong>
                 <ul>
-                  <li><a href="page-a.html">Page A</a></li>
-                  <li><a href="page-b.html">Page B</a></li>
-                  <li><a href="page-c.html">Page C</a></li>
-                  <li><a href="page-d.html">Page D</a></li>
+                  <li><a href="reading-log.html">Page A</a></li>
+                  <li><a href="neuroscience-blog.html">Page B</a></li>
+                  <li><a href="guestbook.html">Page C</a></li>
+                  <li><a href="mini-games.html">Page D</a></li>
                 </ul>
               </li>
             </ul>
