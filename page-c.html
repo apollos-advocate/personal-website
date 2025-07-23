@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Guest Book</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+    <h1>Welcome to my guestbook!</h1>
+    <p>Feel free to leave a message!</p>
+    <form action="/submit-guestbook" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <br>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      <br>
+      <button type="submit">Submit</button>
+  </body>
+</html>

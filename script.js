@@ -25,6 +25,7 @@ function headerHTML() {
           <div class="header-title">Hey, it's Solane!</div>
           <nav>
             <ul>
+              <li><a href="/">Home</a></li>
               <li><a href="page1.html">Page 1</a></li>
               <li><a href="page2.html">Page 2</a></li>
               <li><a href="page3.html">Page 3</a></li>
