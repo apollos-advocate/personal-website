@@ -7,7 +7,7 @@ function loadLayoutByLayout() {
   const mainEl = document.querySelector("main");
   if (!mainEl) return;
 
-  // Skip adding header/footer on the home page
+  // skip adding header/footer on the home page
   const path = window.location.pathname;
   if (path === "/" || path.endsWith("/index.html")) {
     return;
@@ -26,16 +26,16 @@ function headerHTML() {
           <nav>
             <ul>
               <li><a href="/">Home</a></li>
-              <li><a href="about-me.html">Page 1</a></li>
-              <li><a href="projects.html">Page 2</a></li>
-              <li><a href="contact.html">Page 3</a></li>
+              <li><a href="about-me.html">About Me</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="contact.html">Contact Me</a></li>
               <li>
                 <strong>Submenu (hover to show)</strong>
                 <ul>
-                  <li><a href="reading-log.html">Page A</a></li>
-                  <li><a href="neuroscience-blog.html">Page B</a></li>
-                  <li><a href="guestbook.html">Page C</a></li>
-                  <li><a href="mini-games.html">Page D</a></li>
+                  <li><a href="reading-log.html">Reading Log</a></li>
+                  <li><a href="neuroscience-blog.html">Neuroscience Blog</a></li>
+                  <li><a href="guestbook.html">Guest Book</a></li>
+                  <li><a href="mini-games.html">Mini Games</a></li>
                 </ul>
               </li>
             </ul>
