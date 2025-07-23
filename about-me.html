@@ -10,7 +10,98 @@
 <body>
   <main>
     <h1>Welcome to my About Me!</h1>
-    
-  </main>
-</body>
-</html>
+    <h2>Hi! My name is Solane Dasha (she/her) and I'm a student in the US! I'm very interested in the web, especially indie web design.</h2>
+<ul>
+    <h2>Facts about Me!</h2>
+      <li>My birthday is: 03/22/12</li>
+      <li>My favorite color is blood red.</li>
+      <li>My star sign is: Aries</li>
+      <li>My alignment is: Chaotic Good</li>
+      <li>My temparament is: <a href="https://fourtemperaments.com/4-primary-temperaments/" target="_blank">Sanguine</a></li>
+      <li>My MBTI is: ESFP-T</li>
+      <li>Location: USA (we're cooked 💔)</li>
+ </ul>
+  <ul>
+    <h2>My Hobbies</h2>
+      <li>Writing</li>
+      <li>Reading</li>
+      <li>Drawing</li>
+      <li>Web Design</li>
+      <li>Listening to Music</li>
+  </ul>
+    <ul>
+     <h2>My Likes</h2>
+      <li>Dogs</li>
+      <li><strong>Inside jokes</strong></li>
+      <li>Inane references to popular media and 2000's culture (I'm sorry, but Lauren Graham is js too funny 💔)</li>
+      <li><strong>Gum</strong></li>
+      <li>Reading stupidly humongous books with long intelligent-sounding titles in front of people for fun</li>
+      <li>Pixel Art</li>
+      <li>Surprise parties</li>
+      <li>Trivia</li>
+      <li><strong>Dad rock</strong></li>
+      <li><strong>Talking to people</strong></li> 
+    </ul>
+<ul>
+    <h2>My Dislikes</h2>
+     <li>Tomatoes</li>
+     <li>Censorship</li>
+     <li>Hypocrites (based on extensive experience with them)</li>
+     <li>Spiders and wasps and mosquitos and incomphrensibly aggressive bees (like bro chill 💔)</li>
+     <li>Black and white thinking</li>
+     <li>Cringe culture</li>
+     <li>People who can wear shoes on the carpet inside their house. Or like jeans and shoes on their bed. (like how???)</li>
+</ul>
+<div class="container">
+        <h1>Click to learn a random fact about me!</h1>
+        <button id="generate-button">Generate New Fact</button>
+        <div id="fact-display">
+            <!-- Random fact will be displayed here -->
+        </div>
+    </div>
+    <script>
+      const facts = [
+    "I share a birthday with Constance Wu, Reese Witherspoon, and William Shatner.",
+    "I started learning piano when I was 8, but I put it down after 2 years and started learning again in January of 2025",
+    "I started reading when I was 2 1/2, and I read my first chapter book at 4.",
+    "I have a pet dog named Vinnie, who is a 4-year-old Mini Golden Doodle.",
+    "I was born in Wyoming",
+    "I was born in the year of the dragon."
+];
+
+const generateButton = document.getElementById("generate-button");
+const factDisplay = document.getElementById("fact-display");
+
+function generateFact() {
+    const randomIndex = Math.floor(Math.random() * facts.length);
+    factDisplay.innerText = facts[randomIndex];
+}
+
+generateButton.addEventListener("click", generateFact);
+</script>
+<ul>
+  <h2>Favorite Music</h2>
+   <li>INVISIBLE by Duran Duran</li>
+   <li>Black Hole Sun by Soundgarden</li>
+   <li>Champagne Coast by Blood Orange</li>
+   <li>Anything Nirvana, but About A Girl, Lithium, Unplugged, Where Did You Sleep Last Night, and Rape Me are based imo.</li>
+   <li>Anything Radiohead, but Creep, Karma Police, Lucky (listening to it rn!), Paranoid Android, All I Need, High and Dry, and No Surprises are the best of the best tbh.</li>
+   <li>Slowdive, The Smiths, Pixies, Weezer, System of a Down, <strong>WEEZER SUPREMACY!!!!!!!!</strong> Foo Fighters, and Pink Floyd</li>
+</ul>
+<ul>
+  <h2>Favorite Books</h2>
+   <li>The<em>Illuminae Files</em>Check out my tribute <a href="https://apollos-advocate.github.io/my-favorite-books" target="_blank">here!</a></li>
+   <li><em>Scythe</em></li>
+   <li><em>Ready Player One</em></li>
+   <li><em>Children of Blood and Bone</em></li>
+   <li><em>1984</em></li>
+   <li><em>Sapiens</em></li>
+   <li><em>Friends Like These</em></li>
+   <li><em>Gray Matters</em></li>
+</ul>
+<ul>
+  <h2>Favorite Shows</h2>
+  <li>Gilmore Girls</li>
+  <li>Ginny and Georgia</li>
+  <li>The Residence</li>
+</ul>
