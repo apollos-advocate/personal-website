@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   loadLayoutByLayout();
-  // add more js here
+
 });
 
 function loadLayoutByLayout() {
