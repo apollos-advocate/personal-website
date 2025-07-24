@@ -10,80 +10,15 @@
     <h1>Welcome to my guestbook!</h1>
     <p>Feel free to leave a message!</p>
 
-    <form id="guestbook-form">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required />
+    <form action="https://formspree.io/f/xjkoydkl" method="POST">
+  <label for="name">Name:</label>
+  <input type="text" name="name" id="name" required />
 
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" required></textarea>
+  <label for="message">Message:</label>
+  <textarea name="message" id="message" required></textarea>
 
-      <button type="submit">Sign Guestbook</button>
-    </form>
-
-    <div id="guestbook-entries"></div>
-
-    <script type="module">
-      import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
-
-      const supabaseUrl = 'https://gzobkqhvqljoybrwctwh.supabase.co'
-      const supabaseKey =
-        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd6b2ticWh2cWxqb3licndjdHdoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTMzODQ3NzcsImV4cCI6MjA2ODk2MDc3N30.2axgpyyCYSze3xcecc0dYEF-WIrzmhb0c4IEfsu7ixM'
-
-      const supabase = createClient(supabaseUrl, supabaseKey)
-
-      const form = document.getElementById('guestbook-form')
-      const entriesDiv = document.getElementById('guestbook-entries')
-
-      async function loadEntries() {
-        const { data, error } = await supabase
-          .from('guestbook')
-          .select('*')
-          .order('created_at', { ascending: false })
-
-        if (error) {
-          console.error('Error loading entries:', error)
-          entriesDiv.innerText = 'Failed to load entries.'
-          return
-        }
-
-        if (!data.length) {
-          entriesDiv.innerText = 'No messages yet. Be the first!'
-          return
-        }
-
-        entriesDiv.innerHTML = ''
-        data.forEach(entry => {
-          const entryEl = document.createElement('div')
-          entryEl.innerHTML = `<strong>${entry.name}</strong>: ${entry.message}`
-          entriesDiv.appendChild(entryEl)
-        })
-      }
-
-      form.addEventListener('submit', async e => {
-        e.preventDefault()
-
-        const name = document.getElementById('name').value.trim()
-        const message = document.getElementById('message').value.trim()
-
-        if (!name || !message) {
-          alert('Please enter both name and message!')
-          return
-        }
-
-        const { error } = await supabase.from('guestbook').insert([{ name, message }])
-
-        if (error) {
-          console.error('Error submitting entry:', error)
-          alert('Failed to submit your message. Check console.')
-          return
-        }
-
-        alert('Message submitted! Thanks!')
-        form.reset()
-        loadEntries()
-      })
-
-      loadEntries()
-    </script>
+  <button type="submit">Send</button>
+</form>
+<h1>It sends the message straight to my inbox, so if you want to send me cool book recs or some feedback on the website here is your spot!</h1>
   </body>
 </html>
