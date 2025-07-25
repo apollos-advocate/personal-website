@@ -9,10 +9,9 @@
   --link-color: #76da9d;
   --link-color-hover: #006d37;
 
-  /* Fonts */
-  --font: Verdana, sans-serif;
-  --heading-font: Georgia, serif;
-  --font-size: 16px;
+--font: 'Inconsolata', monospace;
+--heading-font: 'Inconsolata', monospace;
+--font-size: 16px;
 
   /* Spacing and Borders */
   --margin: 10px;
@@ -20,17 +19,7 @@
   --border: none;
   --round-borders: 25px;
 }
-@font-face {
-  font-family: 'Rainy Hearts';
-  src: url('rainyhearts.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
 
-:root {
-  --font: 'Rainy Hearts', monospace;
-  --heading-font: 'Rainy Hearts', monospace;
-}
 
 /* BASICS */
 
@@ -327,7 +316,7 @@ main h1 {
 }
 .badge-grid {
   display: grid;
-  repeat: (auto-fit, minmax(20px, 1fr));
+  grid-template-rows: (auto-fit, minmax(20px, 1fr));
   max-width: 250px; /* or whatever fits your layout */
   gap: 8px;
   margin: 20px auto;
@@ -338,6 +327,4 @@ main h1 {
   height: auto;
   display: block;
 }
-
-
 
