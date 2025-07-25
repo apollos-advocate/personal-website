@@ -1,23 +1,30 @@
 :root {
-  /* Background Colors */
-  --background-color: hsl(0, 0%, 100%);
-  --content-background-color: #ef2323;
+  
+  --background-color: #fff8f0; 
+  --content-background-color: #ff914d; 
 
   /* Text Colors */
-  --text-color: #f0f2d5;
-  --centerbar-text-color: #f0f2d5;
-  --link-color: #76da9d;
-  --link-color-hover: #006d37;
+  --text-color: #ffffff;
+  --centerbar-text-color: #ffffff;
+  --link-color: #ffd699; /* light orange */
+  --link-color-hover: #cc5200; /* dark burnt orange */
 
---font: 'Inconsolata', monospace;
---heading-font: 'Inconsolata', monospace;
---font-size: 16px;
+  /* Fonts */
+  --font: 'Inconsolata', monospace;
+  --heading-font: 'Inconsolata', monospace;
+  --font-size: 16px;
+
+  /* Text Shadow */
+  --text-shadow: 2px 2px 0 #cc5200; /* orange shadow */
 
   /* Spacing and Borders */
   --margin: 10px;
   --padding: 15px;
   --border: none;
   --round-borders: 25px;
+}
+h1, h2, h3, p {
+  text-shadow: var(--text-shadow);
 }
 
 
