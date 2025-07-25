@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Memory Match</title>
+  <style>
+    body {
+      background: black;
+      font-family: 'Inconsolata', monospace;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      text-shadow: 0 0 5px #ff00cc, 0 0 10px #00ffff;
+    }
+
+    h1 {
+      color: #ff00cc;
+      text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc;
+    }
+
+    .game-board {
+      display: grid;
+      grid-template-columns: repeat(4, 100px);
+      gap: 15px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .card {
+      width: 100px;
+      height: 100px;
+      background-color: #111;
+      border: 2px solid #00ffff;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: black;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      text-shadow: none;
+    }
+
+    .card.revealed, .card.matched {
+      background-color: #ffff00;
+      color: #000;
+      text-shadow: none;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .message {
+      margin-top: 20px;
+      color: #76da9d;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Memory Match</h1>
+  <div class="game-board" id="game-board"></div>
+  <div class="message" id="message">Match all the pairs!</div>
+
+  <script>
+    const emojis = ['💖', '💖', '🌟', '🌟', '⚡', '⚡', '🔥', '🔥',
+                    '🎀', '🎀', '💿', '💿', '👾', '👾', '🪩', '🪩'];
+    let shuffled = emojis.sort(() => 0.5 - Math.random());
+
+    const board = document.getElementById('game-board');
+    let firstCard = null;
+    let secondCard = null;
+    let lock = false;
+    let matches = 0;
+
+    function createCard(emoji, index) {
+      const card = document.createElement('div');
+      card.classList.add('card');
+      card.dataset.index = index;
+      card.dataset.emoji = emoji;
+      card.innerText = '';
+      card.addEventListener('click', () => revealCard(card));
+      board.appendChild(card);
+    }
+
+    function revealCard(card) {
+      if (lock || card.classList.contains('matched') || card === firstCard) return;
+      card.classList.add('revealed');
+      card.innerText = card.dataset.emoji;
+
+      if (!firstCard) {
+        firstCard = card;
+      } else {
+        secondCard = card;
+        lock = true;
+
+        if (firstCard.dataset.emoji === secondCard.dataset.emoji) {
+          firstCard.classList.add('matched');
+          secondCard.classList.add('matched');
+          matches++;
+          resetTurn();
+
+          if (matches === emojis.length / 2) {
+            document.getElementById('message').textContent = '✨ You matched all the cards! ✨';
+          }
+        } else {
+          setTimeout(() => {
+            firstCard.classList.remove('revealed');
+            secondCard.classList.remove('revealed');
+            firstCard.innerText = '';
+            secondCard.innerText = '';
+            resetTurn();
+          }, 1000);
+        }
+      }
+    }
+
+    function resetTurn() {
+      [firstCard, secondCard] = [null, null];
+      lock = false;
+    }
+
+    shuffled.forEach((emoji, index) => createCard(emoji, index));
+  </script>
+</body>
+</html>
