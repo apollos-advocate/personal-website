@@ -1,48 +1,79 @@
 :root {
+  /* Background Colors */
   --background-color: #ffffff;
   --content-background-color: #ef233c;
+
+  /* Text Colors */
   --text-color: #f0f2d5;
   --centerbar-text-color: #f0f2d5;
   --link-color: #76da9d;
   --link-color-hover: #006d37;
 
+  /* Fonts */
   --font: Verdana, sans-serif;
   --heading-font: Georgia, serif;
   --font-size: 16px;
 
+  /* Spacing and Borders */
   --margin: 10px;
   --padding: 15px;
-  --round-borders: 15px;
-}
-header nav ul li {
-  position: relative; 
+  --border: none;
+  --round-borders: 25px;
 }
 
-header nav ul li ul {
-  position: absolute; 
-  top: calc(100% + 5px); 
-  left: 0;
-  display: none; 
-  background: var(--content-background-color);
-  border-radius: var(--round-borders);
-  padding: 0.5rem 1rem;
-  z-index: 1000;
-  min-width: 160px; 
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2); 
-}
-header nav ul li:hover ul,
-header nav ul li:focus-within ul {
-  display: block; 
+/* BASICS */
+
+* {
+  box-sizing: border-box;
 }
 
-header nav ul li ul li a {
-  display: block;
-  padding: 0.3rem 0;
-  color: var(--centerbar-text-color);
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-size: var(--font-size);
+  margin: 0;
+  padding: var(--margin);
+  color: var(--text-color);
+  font-family: var(--font);
+  line-height: 1.2;
+  background: var(--background-color);
+  background-image: url("https://garden.spoonflower.com/c/18554563/p/f/m/_EtQiZE2X_zyi3znmJBaM57Y0IrHhdxBWxQ5tmOvxYfTT2dEap-5/Baby%20blue%20tiny%20strawberries.jpg");
+}
+
+a {
+  text-decoration: underline;
+  color: var(--link-color);
+}
+
+a:hover,
+a:focus {
+  color: var(--link-color-hover);
   text-decoration: none;
 }
 
-header nav ul li ul li a:hover {
-  color: var(--link-color-hover);
-  text-decoration: underline;
+/* LAYOUT */
+
+.layout {
+  width: 1200px;
+  display: grid;
+  grid-gap: var(--margin);
+  grid-template:
+    "header" auto
+    "main" auto
+    "footer" auto
+    / auto;
 }
+
+main {
+  grid-area: main;
+  overflow-y: auto;
+  padding: var(--padding);
+  background: var(--content-background-color);
+  border: var(--border);
+  border-radius: var(--round-borders);
+  line-height: 1.5;
+}
+
+
