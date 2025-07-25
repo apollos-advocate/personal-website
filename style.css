@@ -1,7 +1,7 @@
 :root {
   /* Background Colors */
   --background-color: hsl(0, 0%, 100%);
-  --content-background-color: #ef233c;
+  --content-background-color: #ef2323;
 
   /* Text Colors */
   --text-color: #f0f2d5;
@@ -39,7 +39,7 @@ body {
   font-family: var(--font);
   line-height: 1.2;
   background: var(--background-color);
-  background-image: url("https://garden.spoonflower.com/c/18554563/p/f/m/_EtQiZE2X_zyi3znmJBaM57Y0IrHhdxBWxQ5tmOvxYfTT2dEap-5/Baby%20blue%20tiny%20strawberries.jpg");
+  background-image: url("");
 }
 
 a {
