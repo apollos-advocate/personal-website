@@ -1,6 +1,6 @@
 :root {
   /* Background Colors */
-  --background-color: #ffffff;
+  --background-color: hsl(0, 0%, 100%);
   --content-background-color: #ef233c;
 
   /* Text Colors */
@@ -19,6 +19,17 @@
   --padding: 15px;
   --border: none;
   --round-borders: 25px;
+}
+@font-face {
+  font-family: 'Rainy Hearts';
+  src: url('rainyhearts.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --font: 'Rainy Hearts', monospace;
+  --heading-font: 'Rainy Hearts', monospace;
 }
 
 /* BASICS */
@@ -74,6 +85,39 @@ main {
   border: var(--border);
   border-radius: var(--round-borders);
   line-height: 1.5;
+}
+
+header {
+  grid-area: header;
+  font-size: 1.2em;
+  border: var(--border);
+  border-radius: var(--round-borders);
+  background: var(--content-background-color);
+}
+
+
+.header-content {
+  padding: var(--padding);
+}
+
+
+.header-title {
+  font-family: var(--heading-font);
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+
+footer {
+  grid-area: footer;
+  border: var(--border);
+  border-radius: var(--round-borders);
+  overflow: hidden;
+  font-size: 0.75em;
+  padding: 15px;
+  background: var(--content-background-color);
+  display: flex;
+  justify-content: center;
 }
 
 
