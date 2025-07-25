@@ -325,6 +325,19 @@ main h1 {
   max-width: max-content; /* so background wraps nicely */
   margin-bottom: 1rem;
 }
+.badge-grid {
+  display: grid;
+  repeat: (auto-fit, minmax(20px, 1fr));
+  max-width: 250px; /* or whatever fits your layout */
+  gap: 8px;
+  margin: 20px auto;
+}
+
+.badge-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
 
 
