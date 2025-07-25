@@ -33,7 +33,6 @@ function headerHTML() {
                 <strong>Submenu (hover to show)</strong>
                 <ul>
                   <li><a href="reading-log.html">Reading Log</a></li>
-                  <li><a href="neuroscience-blog.html">Neuroscience Blog</a></li>
                   <li><a href="guestbook.html">Guest Book</a></li>
                   <li><a href="mini-games.html">Mini Games</a></li>
                 </ul>

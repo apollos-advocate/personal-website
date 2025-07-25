@@ -3,29 +3,35 @@
   --background-color: #fff8f0; 
   --content-background-color: #ff914d; 
 
-  /* Text Colors */
-  --text-color: #ffffff;
-  --centerbar-text-color: #ffffff;
-  --link-color: #ffd699; /* light orange */
-  --link-color-hover: #cc5200; /* dark burnt orange */
+
+  /* Content block */
+  --content-background-color: #ff00cc; /* hot neon pink */
+
+  /* Text and Links */
+  --text-color: #ffffee;
+  --link-color: #00ffff;
+  --link-color-hover: #fffb00;
 
   /* Fonts */
   --font: 'Inconsolata', monospace;
   --heading-font: 'Inconsolata', monospace;
   --font-size: 16px;
 
-  /* Text Shadow */
-  --text-shadow: 2px 2px 0 #cc5200; /* orange shadow */
-
-  /* Spacing and Borders */
-  --margin: 10px;
-  --padding: 15px;
-  --border: none;
+  /* Extras */
   --round-borders: 25px;
+  --padding: 15px;
+  --margin: 10px;
+  --border: 2px solid #ffffff;
 }
 h1, h2, h3, p {
-  text-shadow: var(--text-shadow);
+  color: var(--text-color);
+  text-shadow: 2px 2px 0 #ff00cc, 4px 4px 0 #ffe800;
 }
+a:hover {
+  color: var(--link-color-hover);
+  text-shadow: 0 0 5px #ff00cc, 0 0 10px #fffb00;
+}
+
 
 
 /* BASICS */
@@ -46,7 +52,10 @@ body {
   font-family: var(--font);
   line-height: 1.2;
   background: var(--background-color);
-  background-image: url("");
+ background-image: url('http://dl10.glitter-graphics.net/pub/439/439080gehdtd45yg.gif');
+background-attachment: fixed;
+background-repeat: repeat;
+  background-position: center;
 }
 
 a {

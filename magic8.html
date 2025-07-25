@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>MAGIC 8 BALL</title>
+</head>
+<body>
+    <main>
+        <section class="game-section">
+          <h2>Magic 8 Ball</h2>
+        <input type="text" id="question" placeholder="Ask the 8 Ball anything..." />
+        
+          <button onclick="shakeBall()">Shake</button>
+        <div id="eight-ball-response">🎱</div>
+        <img src="https://blob.gifcities.org/gifcities/7UJTLSIRVPKYB7Q7WURU764YU5EHASTQ.gif"/>
+     </section>
+
+    </main>
+    <script>
+    function shakeBall() {
+  const responses = [
+    "Yes!", "No.", "Maybe?", "Ask again later.",
+    "Absolutely!", "Never!", "Totally!", "I don’t think so.",
+    "It is certain.", "Signs point to yes.", "Better not tell you now."
+  ];
+  const question = document.getElementById("question").value;
+  const response = document.getElementById("eight-ball-response");
+
+  if (!question.trim()) {
+    response.textContent = "🎱 Ask something first!";
+    return;
+  }
+
+  const randomIndex = Math.floor(Math.random() * responses.length);
+  response.textContent = `🎱 ${responses[randomIndex]}`;
+}
+</script>
+<style>
+    .game-section {
+  background: var(--content-background-color);
+  padding: 20px;
+  border-radius: var(--round-borders);
+  text-align: center;
+  margin-top: 2rem;
+  border: var(--border);
+  box-shadow: 0 0 10px #ff00cc, 0 0 20px #00ffff;
+}
+
+#question {
+  width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #fffb00;
+  font-size: 1em;
+  background: #1a1a1a;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+button {
+  background: #ff00cc;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 0 5px #00ffff, 0 0 10px #fffb00;
+}
+
+button:hover {
+  background: #fffb00;
+  color: #000;
+}
+
+#eight-ball-response {
+  margin-top: 15px;
+  font-size: 1.3em;
+  color: var(--text-color);
+  min-height: 40px;
+}
+
+</style>
+</body>
+</html>
