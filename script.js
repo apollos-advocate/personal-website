@@ -7,11 +7,15 @@ function loadLayoutByLayout() {
   const mainEl = document.querySelector("main");
   if (!mainEl) return;
 
-  // skip adding header/footer on the home page
-  const path = window.location.pathname;
-  if (path === "/" || path.endsWith("/index.html")) {
-    return;
-  }
+ const path = window.location.pathname;
+const isHomePage =
+  path.endsWith("/index.html") ||
+  path === "/" ||
+  path.endsWith("/personal-website/");
+
+if (isHomePage) {
+  return; // Don't add header/footer if it's the homepage
+}
 
   mainEl.insertAdjacentHTML("beforebegin", headerHTML());
   mainEl.insertAdjacentHTML("afterend", footerHTML());
