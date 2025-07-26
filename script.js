@@ -7,15 +7,7 @@ function loadLayoutByLayout() {
   const mainEl = document.querySelector("main");
   if (!mainEl) return;
 
- const path = window.location.pathname;
-const isHomePage =
-  path.endsWith("/index.html") ||
-  path === "/" ||
-  path.endsWith("/personal-website/");
-
-if (isHomePage) {
-  return; // Don't add header/footer if it's the homepage
-}
+ 
 
   mainEl.insertAdjacentHTML("beforebegin", headerHTML());
   mainEl.insertAdjacentHTML("afterend", footerHTML());
@@ -24,25 +16,28 @@ if (isHomePage) {
 
 function headerHTML() {
   return `
-      <header>
-        <div class="header-content">
-          <div class="header-title">Hey, it's Solane!</div>
-          <nav>
-            <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="about-me.html">About Me</a></li>
-              <li><a href="projects.html">Projects</a></li>
-              <li><a href="contact.html">Contact Me</a></li>
-              <li>
-                <strong>Submenu (hover to show)</strong>
-                <ul>
-                  <li><a href="reading-log.html">Reading Log</a></li>
-                  <li><a href="guestbook.html">Guest Book</a></li>
-                  <li><a href="mini-games.html">Mini Games</a></li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
+     <header>
+       <div class="header-content">
+        <img src="http://dl9.glitter-graphics.net/pub/493/493789nfy8xzi1n4.gif" width=374 height=44 border=0>
+          <img src="https://text.glitter-graphics.net/sblue/h.gif" border=0><img src="https://text.glitter-graphics.net/sblue/e.gif" border=0><img src="https://text.glitter-graphics.net/sblue/y.gif" border=0><img src="https://dl3.glitter-graphics.net/empty.gif" width=20 border=0><img src="https://dl3.glitter-graphics.net/empty.gif" width=20 border=0><img src="https://text.glitter-graphics.net/sblue/i.gif" border=0><img src="https://text.glitter-graphics.net/sblue/t.gif" border=0><img src="https://text.glitter-graphics.net/sblue/s.gif" border=0><img src="https://dl3.glitter-graphics.net/empty.gif" width=20 border=0><img src="https://text.glitter-graphics.net/sblue/s.gif" border=0><img src="https://text.glitter-graphics.net/sblue/o.gif" border=0><img src="https://text.glitter-graphics.net/sblue/l.gif" border=0><img src="https://text.glitter-graphics.net/sblue/a.gif" border=0><img src="https://text.glitter-graphics.net/sblue/n.gif" border=0><img src="https://text.glitter-graphics.net/sblue/e.gif" border=0><img src="http://dl4.glitter-graphics.net/pub/561/561874hhz1c12ps5.gif" alt="butterfly"/>    
+	        <!-- NAVIGATION -->
+	        <nav>
+	          <ul>
+	            <li><a href="/">Home</a></li>
+	            <li><img src="https://i.postimg.cc/fbMtDqLV/tumblr-inline-pl6z6xx1yb1vsqiz2-500.gif" alt="starss"/>   <a href="/about-me.html">About Me</a></li>
+	            <li><img src="https://i.postimg.cc/fbMtDqLV/tumblr-inline-pl6z6xx1yb1vsqiz2-500.gif" alt="starss"/>   <a href="/projects.html">Projects</a></li>
+	            <li><img src="https://i.postimg.cc/fbMtDqLV/tumblr-inline-pl6z6xx1yb1vsqiz2-500.gif" alt="starss"/>   <a href="/contact.html">Contact Me!</a></li>
+	            <li>
+                  <a href="#">More ▼</a><img src="https://i.postimg.cc/fbMtDqLV/tumblr-inline-pl6z6xx1yb1vsqiz2-500.gif" alt="starss"/>   
+                     <ul>
+                          <li><a href="/reading-log.html" target="_blank">Reading log</a></li>
+                          <li><a href="/guestbook.html" target="_blank">Guest book</a></li>
+                          <li><a href="/mini-games.html" target="_blank">Mini Games</a></li>
+                     </ul>
+             </li>
+	          </ul>
+	        </nav>
+        	
         </div>
       </header>
   `;
