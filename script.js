@@ -23,7 +23,7 @@ function headerHTML() {
 	        <!-- NAVIGATION -->
 	        <nav>
 	          <ul>
-	            <li><a href="/">Home</a></li>
+	            <li><a href="index.html">Home</a></li>
 	            <li><img src="https://i.postimg.cc/fbMtDqLV/tumblr-inline-pl6z6xx1yb1vsqiz2-500.gif" alt="starss"/>   <a href="about-me.html">About Me</a></li>
 	            <li><img src="https://i.postimg.cc/fbMtDqLV/tumblr-inline-pl6z6xx1yb1vsqiz2-500.gif" alt="starss"/>   <a href="projects.html">Projects</a></li>
 	            <li><img src="https://i.postimg.cc/fbMtDqLV/tumblr-inline-pl6z6xx1yb1vsqiz2-500.gif" alt="starss"/>   <a href="contact.html">Contact Me!</a></li>
